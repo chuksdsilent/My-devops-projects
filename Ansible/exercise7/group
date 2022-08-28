@@ -1,0 +1,4 @@
+# Varables accessible by ALL  the Hosta from the inventory file
+dbuser: testadmin
+dbpass admin123
+dname: redhat

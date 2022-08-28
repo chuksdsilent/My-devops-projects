@@ -1,0 +1,20 @@
+---
+# defaults file for post-install
+dbname: registration
+dbuser: samson
+dbpass: 12346
+
+USRNM: globaluser
+COMM: value from group_vars/all file
+
+usernames:
+- user11
+- user12
+- user13
+- user1
+
+ntp0: 0.north-america.pool.ntp.org
+ntp1: 1.north-america.pool.ntp.org
+ntp2: 2.north-america.pool.ntp.org
+ntp3: 3.north-america.pool.ntp.org
+ntp_path: /etc/ntp.conf

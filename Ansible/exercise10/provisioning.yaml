@@ -1,0 +1,32 @@
+---
+- name: Provisioning Server
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install NTP on Centos
+      yum:
+        name: ntp
+        state: present
+      when: ansible_distribution == "CentOS"
+
+    - name: Install NTP on Ubuntu
+      apt:
+         name: ntp
+         state: present
+      when: ansible_distribution == "Ubuntu"
+
+    - name: Start & Enable NTP on RedHart
+      service:
+         name: ntpd
+         state: started
+         enable: yes
+      when: ansible_distribution == "RedHat"
+
+    - name: Start & enable NTP on Debian
+      service:
+         name: ntp
+         state: present
+         enable: yes
+      when: ansible_distribution == "Debian"
+
+

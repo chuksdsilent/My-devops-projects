@@ -1,0 +1,16 @@
+---
+  - name: Learning Fact variable
+    hosts: all
+    tasks:
+        - name: Print 0S names
+          debug:
+            var: ansible_distribution
+        - name: Print Membory Details
+          debug:
+            var: ansible_memory_mb.real.free
+        - name: Print the Name of the Processor
+          debug:
+            var: ansible_processor[2]
+        - name: Print System ip address
+          debug:
+            var: ansible_default_ipv4.address

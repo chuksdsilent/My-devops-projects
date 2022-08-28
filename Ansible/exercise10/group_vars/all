@@ -1,0 +1,6 @@
+dbname: registration
+dbuser: samson
+dbpass: 12346
+
+USRNM: globaluser
+COMM: value from group_vars/all file
