@@ -135,3 +135,26 @@ docker stop container-name/id
 To remove container
 docker rm container-name/id
 
+To see detailed information about an image
+docker inspect container-name
+
+To show the logs of a container
+docker logs container-name
+
+Docker is volatile (it is disposable).
+
+Docker is not stateful
+
+To make a container stateful ( like mysql that stores data) 
+
+We can achieve this in two ways
+
+1. volumes in the host location. Managed by docker in /var/lib/docker/volumes/ on linux machines
+
+2. Bind Mounts
+   This sync a folder between docker container and the host machine like sync directory in vagrant
+   
+
+
+
+
