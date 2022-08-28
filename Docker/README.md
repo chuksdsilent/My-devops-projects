@@ -180,7 +180,9 @@ WORKDIR => Sets the working directory
 ARG => Defines a variable that uses can pass at build-time
 ONBUILD => Adds to the images trigger instruction to be executaed at a later time
 
-
+To tar a directory
+cd into the directory
+tar czvf name.tar.gz *
 
 
 
