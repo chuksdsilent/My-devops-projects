@@ -87,3 +87,51 @@ docker ps
 
 To see all(active and dead) containers
 docker ps -a
+
+To pull nginx
+docker pull nginx
+to pull the latest nginx version
+
+To see all images
+docker images
+
+To run a docker image
+docker run --name oshnginx -p 7932:80 -v -d nginx
+-v = volume
+-d(Detached Mode) = run in the background
+7932 = container port
+80 = host port
+
+To stop a container
+docker stop container-id
+
+To start a container
+docker start container-id or container-name
+
+To run command on docker
+
+To see all files
+docker exec image-name ls /
+
+To attach/login into docker images
+docker exec -it image-name /bin/bash or /bin/sh
+
+To update the image
+apt update
+
+To install process comman
+pat install procps -y
+
+To see all the process inside the container
+ps -ef
+
+To remove images
+docker rmi image-name:tag
+
+To stop the container
+docker stop container-name/id
+
+
+To remove container
+docker rm container-name/id
+
