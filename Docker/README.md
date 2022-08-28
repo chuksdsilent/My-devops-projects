@@ -151,9 +151,37 @@ We can achieve this in two ways
 
 1. volumes in the host location. Managed by docker in /var/lib/docker/volumes/ on linux machines
 
+To create a volume
+docker volume create volume-name
+docker run --name db01 -e MYSQL_ROOT_PASSWORD=admin -d -p3030:3306 -v volume-name:/var/lib/mysql mysql:5.7
+
+
 2. Bind Mounts
    This sync a folder between docker container and the host machine like sync directory in vagrant
-   
+
+To create a bind mount
+docker run --name db01 -e MYSQL_ROOT_PASSWORD=admin -d -p3030:3306 -v /home/oshabz/vprodbdata:/var/lib/mysql mysql:5.7
+
+
+Create Docker Images
+We use Dockerfile to create images
+
+From => Base Image
+LABEL => Adds metadata to an image
+RUN => execute commands in a new layer and commit the results
+ADD/COPY => Adds files and folder into image
+CMD => Runs binaries/commands on docker run
+ENTRYPOINT => Allows you to configure a container that will run as an executable
+VOLUME => Creates a mount point marks it as holding externally mounted volumes
+EXPOSE => Container listens on the specified network ports at runtime
+ENV => set the environment variable
+USER => Sets the username (or UID)
+WORKDIR => Sets the working directory
+ARG => Defines a variable that uses can pass at build-time
+ONBUILD => Adds to the images trigger instruction to be executaed at a later time
+
+
+
 
 
 
