@@ -48,4 +48,42 @@ VM are are hardware virualization
 
 Docker is container virual environment. Docker manages container
 
+Docker hub is the registry of docker images.
 
+Docker image is
+
+A stoped container like vm images
+
+consist of multiple layers
+
+An app  wil be bundled in an image
+
+Containers run from images
+
+images are called repositories in registry
+
+Docker Registries
+
+Docker hub is a default registry
+
+Cloud based Registry
+Dockerhub
+GCR(Google Container Registry)
+Amazon ECR
+
+Inhouse or Local Registry
+Nexus 3_
+JFrog Artifacotory
+DTR (Docker Trusted Registry)
+
+
+docker commands
+
+To test docker
+docker run hello-world
+
+To see active containers
+docker ps
+
+To see all(active and dead) containers
+docker ps -a
