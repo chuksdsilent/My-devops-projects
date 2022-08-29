@@ -141,6 +141,8 @@ docker inspect container-name
 To show the logs of a container
 docker logs container-name
 
+DOCKER VOLUMES
+
 Docker is volatile (it is disposable).
 
 Docker is not stateful
@@ -162,6 +164,7 @@ docker run --name db01 -e MYSQL_ROOT_PASSWORD=admin -d -p3030:3306 -v volume-nam
 To create a bind mount
 docker run --name db01 -e MYSQL_ROOT_PASSWORD=admin -d -p3030:3306 -v /home/oshabz/vprodbdata:/var/lib/mysql mysql:5.7
 
+DOCKER IMAGES
 
 Create Docker Images
 We use Dockerfile to create images
@@ -179,6 +182,26 @@ USER => Sets the username (or UID)
 WORKDIR => Sets the working directory
 ARG => Defines a variable that uses can pass at build-time
 ONBUILD => Adds to the images trigger instruction to be executaed at a later time
+
+To build a docker image
+docker build -t nanoweb .
+
+To push image to docker registry
+login
+docker login
+enter username and password
+
+Build the image with your username
+docker build -t oshabz/nanoweb .
+
+To run command on Dockerfile
+CMD ["echo", "hello"]
+
+Entry Point
+The user needs to pass an argument
+ENTRYPOINT ["echo"]
+
+if CMD and ENTRYPOINT are used in together the CMD becomes the default
 
 To tar a directory
 cd into the directory
