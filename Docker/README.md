@@ -51,10 +51,12 @@ A Docker image is a file used to execute code in a Docker container. Docker imag
 * DTR (Docker Trusted Registry)
 
 
-docker commands
+Docker Commands
 
 To test docker
+```
 docker run hello-world
+```
 
 To see active containers
 docker ps
