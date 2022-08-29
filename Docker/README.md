@@ -59,65 +59,87 @@ docker run hello-world
 ```
 
 To see active containers
+```
 docker ps
+```
 
 To see all(active and dead) containers
+```
 docker ps -a
+```
 
-To pull nginx
+To pull nginx with the latest version
+```
 docker pull nginx
-to pull the latest nginx version
+```
 
 To see all images
+```
 docker images
+```
 
 To run a docker image
+```
 docker run --name oshnginx -p 7932:80 -v -d nginx
 -v = volume
 -d(Detached Mode) = run in the background
 7932 = container port
 80 = host port
-
+```
 To stop a container
+```
 docker stop container-id
+```
 
 To start a container
+```
 docker start container-id or container-name
+```
 
-To run command on docker
-
-To see all files
+To see all files inside a docker image
+```
 docker exec image-name ls /
+```
 
 To attach/login into docker images
+```
 docker exec -it image-name /bin/bash or /bin/sh
-
+```
 To update the image
+```
 apt update
-
+```
 To install process comman
-pat install procps -y
-
+```
+apt install procps -y
+```
 To see all the process inside the container
+```
 ps -ef
-
+```
 To remove images
+```
 docker rmi image-name:tag
-
+```
 To stop the container
+```
 docker stop container-name/id
-
+```
 
 To remove container
+```
 docker rm container-name/id
+```
 
 To see detailed information about an image
+```
 docker inspect container-name
-
+```
 To show the logs of a container
+```
 docker logs container-name
-
-DOCKER VOLUMES
+```
+## DOCKER VOLUMES
 
 Docker is volatile (it is disposable).
 
@@ -127,62 +149,73 @@ To make a container stateful ( like mysql that stores data)
 
 We can achieve this in two ways
 
-1. volumes in the host location. Managed by docker in /var/lib/docker/volumes/ on linux machines
+* Volumes in the host location. Managed by docker in /var/lib/docker/volumes/ on linux machines
 
 To create a volume
+```
 docker volume create volume-name
 docker run --name db01 -e MYSQL_ROOT_PASSWORD=admin -d -p3030:3306 -v volume-name:/var/lib/mysql mysql:5.7
+```
 
-
-2. Bind Mounts
+* Bind Mounts
    This sync a folder between docker container and the host machine like sync directory in vagrant
 
 To create a bind mount
+```
 docker run --name db01 -e MYSQL_ROOT_PASSWORD=admin -d -p3030:3306 -v /home/oshabz/vprodbdata:/var/lib/mysql mysql:5.7
+```
 
 DOCKER IMAGES
 
 Create Docker Images
 We use Dockerfile to create images
 
-From => Base Image
-LABEL => Adds metadata to an image
-RUN => execute commands in a new layer and commit the results
-ADD/COPY => Adds files and folder into image
-CMD => Runs binaries/commands on docker run
-ENTRYPOINT => Allows you to configure a container that will run as an executable
-VOLUME => Creates a mount point marks it as holding externally mounted volumes
-EXPOSE => Container listens on the specified network ports at runtime
-ENV => set the environment variable
-USER => Sets the username (or UID)
-WORKDIR => Sets the working directory
-ARG => Defines a variable that uses can pass at build-time
-ONBUILD => Adds to the images trigger instruction to be executaed at a later time
+* From => Base Image
+* LABEL => Adds metadata to an image
+* RUN => execute commands in a new layer and commit the results
+* ADD/COPY => Adds files and folder into image
+* CMD => Runs binaries/commands on docker run
+* ENTRYPOINT => Allows you to configure a container that will run as an executable
+* VOLUME => Creates a mount point marks it as holding externally mounted volumes
+* EXPOSE => Container listens on the specified network ports at runtime
+* ENV => set the environment variable
+* USER => Sets the username (or UID)
+* WORKDIR => Sets the working directory
+* ARG => Defines a variable that uses can pass at build-time
+* ONBUILD => Adds to the images trigger instruction to be executaed at a later time
 
 To build a docker image
+```
 docker build -t nanoweb .
-
+```
 To push image to docker registry
-login
+login using
+```
 docker login
-enter username and password
+```
+Enter username and password
 
 Build the image with your username
+```
 docker build -t oshabz/nanoweb .
+```
 
 To run command on Dockerfile
+```
 CMD ["echo", "hello"]
-
+```
 Entry Point
 The user needs to pass an argument
+```
 ENTRYPOINT ["echo"]
-
+```
 if CMD and ENTRYPOINT are used in together the CMD becomes the default
 
 To tar a directory
 cd into the directory
+```
 tar czvf name.tar.gz *
-
+```
 
 
 
