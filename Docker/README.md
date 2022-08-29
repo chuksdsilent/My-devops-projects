@@ -1,16 +1,6 @@
-Docker
+# Docker
 
-In Docker we isolate our services like ngnix, tomcat, apache etc
-
-To isolate our services we need VM's/Cloud Computing to setup infra
-
-We isolate our service in OS
-
-Because of isolation we end up setting up multiple VM's/Instances
-
-VM's/Instances will be overprovisioned
-
-Results in high CapEx and OpEx
+In Docker we isolate our services like ngnix, tomcat, apache etc. To isolate our services we need VM's/Cloud Computing to setup infra. We isolate our service in OS. Because of isolation we end up setting up multiple VM's/Instances VM's/Instances will be overprovisioned and results in high CapEx and OpEx
 
 Every VM needs
 
