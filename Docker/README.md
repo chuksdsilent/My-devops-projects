@@ -1,7 +1,6 @@
 # Docker
 
-In Docker we isolate our services like ngnix, tomcat, apache etc. To isolate our services we need VM's/Cloud Computing to setup infra. We isolate our service in OS. Because of isolation we end up setting up multiple VM's/Instances VM's/Instances will be overprovisioned and results in high CapEx and OpEx
-
+In Docker we isolate our services like ngnix, tomcat, apache etc. To isolate our services we need VM's/Cloud Computing to setup infra. We isolate our service in OS. Because of isolation we end up setting up multiple VM's/Instances VM's/Instances will be overprovisioned and results in high CapEx and OpEx. Docker is container virtual environment. Docker manages container. Docker hub is the registry of docker images.
 ### Every VM needs
 
 * OS and OS needs maintenance
@@ -24,7 +23,7 @@ A container is a standard unit of software that packages up
 * dependencies
 * but does not use different operating systems
 
-### comparing VM vs Containers
+### Comparing VM vs Containers
 
 * container uses one operating system while vms uses different operating systems
 * container boot up faster than vms
@@ -33,35 +32,23 @@ A container is a standard unit of software that packages up
 * containers are OS virtualization
 * VM are are hardware virualization
 
-Docker is container virual environment. Docker manages container
 
-Docker hub is the registry of docker images.
+A stopped container is like vm images consist of multiple layers. Containers run from images
 
-Docker image is
+## Docker Image
+A Docker image is a file used to execute code in a Docker container. Docker images act as a set of instructions to build a Docker container, like a template. Docker images also act as the starting point when using Docker. An image is comparable to a snapshot in virtual machine (VM) environments. Images are called repositories in registry. Docker hub is a default registry
 
-A stoped container like vm images
+### Different Registries
 
-consist of multiple layers
+* Cloud based Registry
+* Dockerhub
+* GCR(Google Container Registry)
+* Amazon ECR
 
-An app  wil be bundled in an image
-
-Containers run from images
-
-images are called repositories in registry
-
-Docker Registries
-
-Docker hub is a default registry
-
-Cloud based Registry
-Dockerhub
-GCR(Google Container Registry)
-Amazon ECR
-
-Inhouse or Local Registry
-Nexus 3_
-JFrog Artifacotory
-DTR (Docker Trusted Registry)
+* Inhouse or Local Registry
+* Nexus 3+
+* JFrog Artifacotory
+* DTR (Docker Trusted Registry)
 
 
 docker commands
