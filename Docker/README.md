@@ -1,6 +1,6 @@
 # Docker
 
-In Docker we isolate our services like ngnix, tomcat, apache etc. To isolate our services we need VM's/Cloud Computing to setup infra. We isolate our service in OS. Because of isolation we end up setting up multiple VM's/Instances VM's/Instances will be overprovisioned and results in high CapEx and OpEx. Docker is container virtual environment. Docker manages container. Docker hub is the registry of docker images.
+Docker is an open source platform that enables developers to build, deploy, run, update and manage containers—standardized, executable components that combine application source code with the operating system (OS) libraries and dependencies required to run that code in any environment. In Docker we isolate our services like ngnix, tomcat, apache etc in our OS. To isolate our services we need VM's/Cloud Computing to setup infra. Because of isolation we end up setting up multiple VM's/Instances VM's/Instances will be overprovisioned and results in high Capital and Operational expenditure. Docker is container virtual environment. Docker manages containers. Docker hub is the registry of docker images.
 ### Every VM needs
 
 * OS and OS needs maintenance
