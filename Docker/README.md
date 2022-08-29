@@ -16,22 +16,22 @@ VM's are portable(i.e it can be moved to server or to local) but they are bulky.
 * high availablity achived by multiple instances/vm's
 * portability matters or eases the deployment
 
-##Container
+## Container
 Container share the machines' OS system kernel and therefore do not require OS per application
 
 A container is a standard unit of software that packages up 
-  code
-  dependencies
-but does not use different operating systems
+* code
+* dependencies
+* but does not use different operating systems
 
-comparing VM vs Containers
+### comparing VM vs Containers
 
-container uses one operating system while vms uses different operating systems
-container boot up faster than vms
-container are processes
-container offer isolation while vms offer virtualization
-containers are OS virtualization
-VM are are hardware virualization
+* container uses one operating system while vms uses different operating systems
+* container boot up faster than vms
+* container are processes
+* container offer isolation while vms offer virtualization
+* containers are OS virtualization
+* VM are are hardware virualization
 
 Docker is container virual environment. Docker manages container
 
