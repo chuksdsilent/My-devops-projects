@@ -1,5 +1,5 @@
-# Kubernetics
-Kubernetics helps to manage cluster of docker nodes. This is called orchestartion. This is a suitation whereby we have one master node that talks to and controls other nodes(slave nodes)
+# Kubernetes
+Kubernetes helps to manage cluster of docker nodes. This is called orchestartion. This is a suitation whereby we have one master node that talks to and controls other nodes(slave nodes)
 
 ## Different orchestration tools
 * Docker swarm
@@ -85,4 +85,15 @@ DNS
 Web UI
 Container Resource Monitoring
 Cluster Level Logging
+
+## PODS
+A POD provides all the resources needed by a container like cpu, ram etc. container runs inside a pod(like VM)
+In every pod there should be one main container and others should be helper container. if we have nginx and mysql they should not be ran on the same pod but on different pod
+
+## Nodes
+Nodes contains different pods
+## Overlay Network
+This is a network that allows nodes communicate through a network while inside the nodes different pods communicate through an internal network
+
+
 	
