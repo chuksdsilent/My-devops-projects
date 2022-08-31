@@ -111,4 +111,26 @@ This is located in the home directory
 cat .kub/config
 ```
 
+To get nodes
+```
+kubectl.exe get nodes
+```
+To create deployment
+```
+kubectl create deployment hello-minikube --image=k8s.ger.io/echoserver:1.10
+```
+
+To get pods
+```
+kubectl get pod
+```
+
+To get deployment
+```
+kubectl get deployment
+```
+
+To check your deployment
+minikube service hello-minikube
+
 
