@@ -97,10 +97,18 @@ This is a network that allows nodes communicate through a network while inside t
 
 
 To install Kubernetes in windows
+Open powershell as admin and run the enter commands
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-```
 
-```
 choco install minikube kubernetes-cli -y
 ```
+
+To check kubctl config
+This is located in the home directory
+
+```
+cat .kub/config
+```
+
+
