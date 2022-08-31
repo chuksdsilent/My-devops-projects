@@ -96,4 +96,11 @@ Nodes contains different pods
 This is a network that allows nodes communicate through a network while inside the nodes different pods communicate through an internal network
 
 
-	
+To install Kubernetes in windows
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+
+```
+choco install minikube kubernetes-cli -y
+```
