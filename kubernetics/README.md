@@ -119,6 +119,11 @@ To create deployment
 ```
 kubectl create deployment hello-minikube --image=k8s.ger.io/echoserver:1.10
 ```
+To expose deployment
+```
+kubectl expose deployment hello-minikube --type=NodePort --port=8080
+```
+
 
 To get pods
 ```
@@ -131,6 +136,7 @@ kubectl get deployment
 ```
 
 To check your deployment
+```
 minikube service hello-minikube
-
-
+```
+This will generate a url you can use to access your minikube
