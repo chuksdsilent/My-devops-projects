@@ -140,3 +140,28 @@ To check your deployment
 minikube service hello-minikube
 ```
 This will generate a url you can use to access your minikube
+
+To get svc
+```
+kubectl get svc
+```
+
+To delete a svc
+```
+kubectl delete svc svc_name
+```
+
+To delete a deployment
+```
+kubectl delete deployment deployment_name
+```
+
+To stop the minikube cluster
+```
+minikube stop
+```
+
+To delete minikube
+```
+minikube delete
+```
