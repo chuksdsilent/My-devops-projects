@@ -248,6 +248,18 @@ It is on of the best practices and is used to reduce the file size of the image 
 docker cp file_name.ext container_id
 ```
 
+### 47. Let's say I have a container which is attchaned with a volume, if container crashes what happens to the volume?
+The volume will not be deleted by default until the user deletes it
+```
+docker run -it -v data-volume:/data image-name /bin/sh
+```
+To see all the volums
+```
+docker volume ls
+```
+
+### 48. What is init and side-car containers?
+Init container executes before youmain container execute and will not be running always. you can have different init container. This can be used if you want to do initial configuration before the main containers while side-car containers runs beside the main container as a helper.
 
 
 
