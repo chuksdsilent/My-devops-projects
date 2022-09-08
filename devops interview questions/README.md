@@ -15,19 +15,21 @@ git pull fetches the remote repository and also merge to the local branch but gi
 git merge origin/remot-repo-name
 ```
 
-3. How to clone a particular branch from remote repo?
+### 3. How to clone a particular branch from remote repo?
+```
 git clone -b branch_name --single-branch remote_repo
+```
 
-4. What happens in the background when we do mvn install?
+### 4. What happens in the background when we do mvn install?
 mvn clean delete the target folder
 mvn install execute the following
-validate
-compile
-test
-package
-verify
-install
-deploy
+* validate
+* compile
+* test
+* package
+* verify
+* install
+* deploy
 
 5. settings you need to do before mvn deploy?
 you need to have settings.xml where you specify your username and password of your server
