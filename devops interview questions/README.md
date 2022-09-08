@@ -1,7 +1,9 @@
-1. Why do we need git and why is it different from SVN?
-GIT is a commonly used version control system
-git tracks changes from you make and it you can revert to any version you want
-git also allows easy collaboration
+# Devops Interview
+
+### 1. Why do we need git and why is it different from SVN?
+* GIT is a commonly used version control system
+* git tracks changes from you make and it you can revert to any version you want
+* git also allows easy collaboration
 
 We have 2 types of VCS	
 1. Centerilize VCS (subersion) - everybody push to the center repository. no working copy. branching is done on the central repo
