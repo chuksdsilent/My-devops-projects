@@ -1,4 +1,4 @@
-# Devops Interview
+# Devops Interview Questions And Answers
 
 ### 1. Why do we need git and why is it different from SVN?
 * GIT is a commonly used version control system
@@ -243,7 +243,10 @@ example ansible all -i "ip_address" -m setup
 45. Why do we need a multistage docker file?
 It is on of the best practices and is used to reduce the file size of the image drastically. 
 
-46. 
+### 46. can you copy a file from local to a running container? Yes
+```
+docker cp file_name.ext container_id
+```
 
 
 
