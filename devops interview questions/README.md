@@ -5,13 +5,15 @@
 * git tracks changes from you make and it you can revert to any version you want
 * git also allows easy collaboration
 
-We have 2 types of VCS	
+## We have 2 types of VCS	
 1. Centerilize VCS (subersion) - everybody push to the center repository. no working copy. branching is done on the central repo
 2. distributed (3 layer aritechture) - you will have a local copy. branching can be done on local repo
 
-2. Difference between git pull and git fetch?
-git pull fetches the remote repository and also merge to the local branch but git fetch does half of the work. it fetches the remote repo and you merge the repo manually to the local branch
-by using git merge origin/remot-repo-name
+### 2. Difference between git pull and git fetch?
+git pull fetches the remote repository and also merge to the local branch but git fetch does half of the work. it fetches the remote repo and you merge the repo manually to the local branch by using 
+```
+git merge origin/remot-repo-name
+```
 
 3. How to clone a particular branch from remote repo?
 git clone -b branch_name --single-branch remote_repo
