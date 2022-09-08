@@ -22,6 +22,7 @@ git clone -b branch_name --single-branch remote_repo
 
 ### 4. What happens in the background when we do mvn install?
 mvn clean delete the target folder
+
 mvn install execute the following
 * validate
 * compile
