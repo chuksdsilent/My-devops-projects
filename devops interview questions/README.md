@@ -253,7 +253,7 @@ The volume will not be deleted by default until the user deletes it
 ```
 docker run -it -v data-volume:/data image-name /bin/sh
 ```
-To see all the volums
+To see all the volumes
 ```
 docker volume ls
 ```
@@ -261,6 +261,9 @@ docker volume ls
 ### 48. What is init and side-car containers?
 Init container executes before youmain container execute and will not be running always. you can have different init container. This can be used if you want to do initial configuration before the main containers while side-car containers runs beside the main container as a helper.
 
-
+### 49. What is default deployment strategy?
+Rolling update
+#### How it works
+When you make a change to your application it makes sure the old version is down and then create a replicate of the new container
 
 
