@@ -312,4 +312,6 @@ When you make a change to your application it makes sure the old version is down
 
 
 ### 50 Commands to check the container logs?
+```
 kubectl logs pod/<pod_name> -c container_name
+```
