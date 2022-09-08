@@ -32,74 +32,82 @@ mvn install execute the following
 * install
 * deploy
 
-5. settings you need to do before mvn deploy?
-you need to have settings.xml where you specify your username and password of your server
-you need to have you id in your porn.xml the matches the host in the settings.xml
-also you need to specify the url/ip address where you artifact will go
-copy your settings.xml to the ~/.m2/ folder
-mvn install
+### 5. settings you need to do before mvn deploy?
+* you need to have settings.xml where you specify your username and password of your server
+* you need to have you id in your porn.xml the matches the host in the settings.xml
+* also you need to specify the url/ip address where you artifact will go
+* copy your settings.xml to the ~/.m2/ folder
+* mvn install
 
-6. why maven execution takes time in the first and second but less time in the third execuion
+### 6. why maven execution takes time in the first and second but less time in the third execuion
 It downloads any dependency to the local repository on the first execution but uses the local repo to execute on the second and third time
 
-7. how to get the present working directory?
+### 7. how to get the present working directory?
+```
 basname "$PWD" or
 pwd | rev | cut -d '/' -f 1 | rev
+```
 
-8. how to copy file from local machine to cloud linux machine
+### 8. how to copy file from local machine to cloud linux machine
+```
 pscp file_name.ext username@ip:location
+```
 
-9 why we need ad-hoc commands and give scenario where you have used adhoc commands
+### 9 why we need ad-hoc commands and give scenario where you have used adhoc commands
 Ansible ad-hoc commands uses the /usr/bin/ansible command-line tool to automate a single task on one or more managed nodes. Ad-hoc commands are quick and easy, but they are not reusable.
 
 example
+```
 ansible --version
 ansible all -i '324.323.42.32' -m ping 
 ansible dev -i hosts -m ping
 ansible dev -i hosts -m setup
 ansible dev -i host -m copy -a 'src/home/sam/host dest=/home/sam/'
-
-10. what is ansible.cfg file?
+```
+### 10. what is ansible.cfg file?
 it is ansible configuration file where you can define settings for ansible. it is located at /etc/ansible
 
-11. What are the modules you have worked on? which module will you use to get the a file from node to master
+### 11. What are the modules you have worked on? which module will you use to get the a file from node to master
 copy fetch, yum debug, get_url, expect, template, file, apt, command, shell
 fetch module get the file from node to master
 
-12. let say I have a plyabook which has 5 tasks in playbook, first 2 tasks should run on my local machine while the other task should run on node
+### 12. let say I have a plyabook which has 5 tasks in playbook, first 2 tasks should run on my local machine while the other task should run on node
 
-13. How to save only last 5 build of a jenkins job?
+### 13. How to save only last 5 build of a jenkins job?
 Note: jenkins save all jobs in .jenkins/jobs folder
+
 Go to configure select the max. number of builds - 5 and save
 
-14 Have you worked on jenkinsfile? yes
+### 14 Have you worked on jenkinsfile?
+ yes
 
-15. Can we use docker in jenkinsfile as a node? Yes
+### 15. Can we use docker in jenkinsfile as a node? 
+Yes
 
-16 who will handle docker container creation and deletion? This is handled by jenkins
+### 16 who will handle docker container creation and deletion? 
+This is handled by jenkins
 
-17. If I am building a maven project always and docker container is fresh instance, it will try to download dependency from repository, what measures you will take to reduce
-build time?
-a. Download all the dependency your project needs on your hosts
-b. copy the local repository into the container
-c. add args '-v /root/.m2:/root/.m2/
+### 17. If I am building a maven project always and docker container is fresh instance, it will try to download dependency from repository, what measures you will take to reduce build time?
+* Download all the dependency your project needs on your hosts
+* copy the local repository into the container
+* add args '-v /root/.m2:/root/.m2/
 
-18. What is multiple branch pipeline?
+### 18. What is multiple branch pipeline?
 The multiplebranch pipleine project type enables you to implement different jenkinsfiles for different branches of the same project. Jenkins manages and executes the pipelines for each branch
 
-19. If you forget jenkins password, how would you login back?
-a. Go to jenkins folder cd ~/.jenkins
-b. vi config.xml
-c. check the usesecurity to false
-d. logout
-e. ps -eaf
-f. kill jenkins PID kill -9 PID
+### 19. If you forget jenkins password, how would you login back?
+* Go to jenkins folder cd ~/.jenkins
+* vi config.xml
+* check the usesecurity to false
+* logout
+* ps -eaf
+* kill jenkins PID kill -9 PID
 
-20. Best Practices of Docker
-a. Always keep Dokerfile in empty directory or make sure directory where Dockerfile present with required files
-b. Use official images
-c. Use more specific tags
-d. Use multi stage build to remove build deps
+### 20. Best Practices of Docker
+* Always keep Dokerfile in empty directory or make sure directory where Dockerfile present with required files
+* Use official images
+* Use more specific tags
+* Use multi stage build to remove build deps
 
 21 Difference between docker stop and docker kill?
 To see the live events on your hosts
@@ -264,6 +272,8 @@ Init container executes before youmain container execute and will not be running
 ### 49. What is default deployment strategy?
 Rolling update
 #### How it works
-When you make a change to your application it makes sure the old version is down and then create a replicate of the new container
+When you make a change to your application it makes sure the old version is down and then create a replicate of the new deployment
 
 
+### 50 Commands to check the container logs?
+kubectl logs pod/<pod_name> -c container_name
