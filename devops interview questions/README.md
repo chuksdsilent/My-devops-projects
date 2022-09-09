@@ -244,14 +244,14 @@ you must have python installed on your system
  sudo apt install ansible
  ```
 
-### To verify your installation
+To verify your installation
 ```
 ansible --version
 ```
 
 node: you install ansible only your master
 
-### 6. create ssh key in the master and copy public key to the nodes
+Create ssh key in the master and copy public key to the nodes
 ```
 ssh-keygen
 ssh-copy-id root@ip_address
@@ -315,3 +315,4 @@ When you make a change to your application it makes sure the old version is down
 ```
 kubectl logs pod/<pod_name> -c container_name
 ```
+
