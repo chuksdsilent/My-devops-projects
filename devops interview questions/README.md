@@ -408,6 +408,9 @@ git diff is used to compare two files
 git log --online | head
 git diff commit_id
 ```
-
+while git status is used to check the status of your file(the location of your file)
+```
+git status
+```
 
 
