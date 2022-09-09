@@ -316,3 +316,98 @@ When you make a change to your application it makes sure the old version is down
 kubectl logs pod/<pod_name> -c container_name
 ```
 
+### 51. Command to identify empty files in a given directory?
+```
+find . -empty
+```
+
+### 52. What is the commands used to configure ssh connectivity between 2 machnines?
+```
+ssh-keygen
+cd ~/.ssh/
+ssh-copy-id <username>@ip_address
+ssh <username>@ip_address
+```
+
+### 53. What files will be present in .ssh folder?
+* id_rsa
+* id_rs.pub
+* known_hosts (It contains fingerprints of the systems)
+* auth_key
+
+### 54. How do you schedule a shell script in unix machines?
+For that we can use crontab. 
+```
+crontab -e
+```
+
+### 55. What command is used to get load average?
+```
+top
+```
+
+### 56. What is the command for checking the running processor and how to check the PID for a runninng process?
+```
+ps -eaf
+```
+
+### 57. What is the command to get wether certain port is listening or not?
+```
+netstat -tunlp
+or
+ps -ef | grep proccess_id
+```
+### 58. Commands to remove empty spaces in a file
+```
+sed '/*$/d' file.ext
+```
+### 58. What is exit status?
+Exit status is used to check if the command ran was successful or not. If it returns zero it means that it was successful but if it a non zero code it means it is not successful. To check the exit code you can use the following command
+```
+$?
+```
+
+### 59. When given machine, how will you identify which machine it is?
+```
+uname -a
+```
+### 60. What is git reset?
+Git reset is a type of command that can be use to handle the changes made on the local repository. It can be used to revert changes already made.
+#### Types of reset
+* Mixed - Moves committed files on the repo to the working directory
+```
+git reset HEAD~1
+```
+* Soft - Moves committed files on the repo to the staging
+```
+git reset --soft HEAD~1
+```
+* Hard - This removes the file from the working directory
+```
+git reset --hard HEAD~1
+```
+
+### 61 What is command to list all branches?
+```
+git branch -a
+```
+
+### 62. What is the command to remove a local branch?
+```
+git branch -D brach_name
+```
+
+### 63. What is the command to delete remote branch?
+```
+git branch --delete branch_name
+```
+
+### 64. What is the difference between git diff and git status?
+git diff is used to compare two files 
+```
+git log --online | head
+git diff commit_id
+```
+
+
+
